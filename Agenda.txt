@@ -1,0 +1,99 @@
+GENERELL:
+Wir verzichten auf:
+	- Loops
+	- Eigene Funktionen mit Parametern
+	- Lokale Variablen
+
+1. Intro
+	- Frage: Wer hat schonmal etwas programmiert?
+	- Vorstellung Pico8, Aufrufen der Webseite
+	- "Fantasy-Konsole"
+	- einfach zu programmieren
+	- Pico hat keine Groß- und Kleinschreibung!
+	- Picos Display ist 128x128 Pixel und unterstützt 16 Farben
+	- 30 Bilder pro Sekunde
+	- Pico gibt uns einige Funktionen, die nützlich sind, um Spiele zu machen
+	- Sprache: LUA
+	
+2. Erstes Programm [STEP1]
+	- PRINT
+		- PRINT wird in grün angezeigt - d.h. das ist ein Funktion von Pico!
+		- Anführungsstriche stellen klar, dass es sich um Text handelt
+	- CLS
+	- Eigene Funktion
+		- Eigene Funktion ist nicht in grün, weil sie nicht von Pico ist!
+	- Wichtig: Pico wird euer Programm immer von oben nach unten, Zeile für Zeile durchgehen!
+	- Mit STRG-Z und STRG-Y rückgängig machen und wiederholen
+	- Shift gedrückt halten um Text zu markieren
+	- STRG-C / STRG-V zum kopieren
+	
+3. Einen Ball auf den Bildschirm zeichnen [STEP2]
+	- Es gibt 3 Funktionen, die Pico in unserem Code sucht:
+		- _INIT: Einmal ausgeführt wenn das Spiel startet
+		- _UPDATE: Wird einmal pro Frame ausgeführt
+		- _DRAW: Wird einmal pro Frame ausgeführt
+	- CLS() in Init - Bildschirm leeren zum Programmstart
+	- CIRCFILL(64,64,2,10) in Draw - Einen Ball zeichnen
+	- Nun bewegt sich aber immer noch nichts ...
+	- VARIABLEN
+	- BALL_X-Variable in _INIT
+		- zuerst mit 20 initialisieren, zeigen, dass man sie als Argument benutzen kann
+	- BALL_X in Update um 1 erhöhen
+	- Warum entsteht eine Wurst?
+		- Lösung: CLS am Anfang der Draw-Funktion!
+
+4. Ein springender Ball [STEP3]
+	- Warum verlässt der Ball den Bildschirm?
+		- Lösung: Erkennen, wann der Ball an den Rand kommt
+	- Müssen uns mit einer Variable merken, in welche Richtung der Ball geht
+	- IF-Statements
+		- Richtung ändern an der Kante
+		- Frage: Warum 127 und nicht 128?
+	- AUFGABE: Auch für linken Rand!
+	- Frage: Warum wird der Ball am Rand abgeschnitten?
+		- Hat einen Radius! Müssen wir berücksichtigen
+		- Radius in Variable (wir benutzen ihn mehrmals)
+		- Radius +/- 1, da Mittelpunkt nicht mitgezählt wird
+	- Struktur! Kollision in eigene Funktion!
+	- Protip: Mit ALT-Hoch/Runter zwischen Funktionen springen
+	- BALL_DX ändern - was passiert bei Kollision?
+		- Lösung: BALL_DX nicht auf festen Wert ändern sondern auf -BALL_DX!
+
+5. AUFGABE: Den Ball diagonal bewegen! [STEP4]
+	Bonus: Farbe bei jedem Bounce verändern!
+	- Vergleichen, etwas aufräumen
+	- Kommentare!
+	
+6. Spielerinput [STEP5]
+	- FRAGE: Ist das jetzt schon ein Spiel?
+		- Nein! Es ist nicht interaktiv - es reagiert nicht
+	- Paddle drawen
+		- 	RECTFILL(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
+	- Paddle bewegen
+		- Wir benutzen zwei mal die 2 ... eine Variable!
+	- Paddle beschränken an den Seiten
+
+7. Kollision [STEP6]
+	- FRAGE: Ist es jetzt ein Spiel?
+		- Nein! Eingaben verändern Spiel nicht wirklich
+	- Kollisionsabfrage
+		- großes Thema in Videospielen
+		- Oft einfacher auszuschließen, wann keine Kollision vorliegt
+		- Ans Problem herantasten: Erst die einfachen Fälle behandeln
+		- Wir behandeln den Ball als Rechteck
+		- Mit Paint zeigen - alle vier Seiten ausschließen
+	- Ball springt nicht seitlich vom Paddle weg!
+		- FRAGE: Warum?
+		- Wir prüfen nicht, aus welcher Richtung der Ball kommt!
+	- Y-Koordinate des Balls checken, wenn Kollision sicher ist
+
+
+	
+
+	
+
+BONUS:
+- Random Ball Start
+- Damping auf Paddle
+- SFX bei Collision
+- Paddle färben bei Collision
