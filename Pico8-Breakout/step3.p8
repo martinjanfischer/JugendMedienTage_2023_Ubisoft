@@ -3,8 +3,8 @@ version 41
 __lua__
 function _init()
 	ball_x = 20
- ball_dx = 2
- ball_radius = 2
+	ball_dx = 2
+	ball_radius = 2
 	cls()
 end
 
@@ -18,7 +18,7 @@ function check_bounce()
 		ball_dx = -ball_dx
 	end
 	if ball_x-ball_radius+1 < 0 then
-	 ball_dx = -ball_dx
+		ball_dx = -ball_dx
 	end
 end
 

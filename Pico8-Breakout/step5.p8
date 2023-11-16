@@ -2,6 +2,7 @@ pico-8 cartridge // http://www.pico-8.com
 version 41
 __lua__
 function _init()
+
 	-- ball
 	ball_x = 20
 	ball_dx = 2
@@ -17,6 +18,7 @@ function _init()
 	pad_speed = 2
 		
 	cls()
+
 end
 
 function _update()
@@ -62,15 +64,17 @@ function move_paddle()
 	
 	-- ist pad am rechten rand?
 	if pad_x + pad_w > 127 then
-	 pad_x = 127 - pad_w
+		pad_x = 127 - pad_w
 	end
 
 end
 
 function _draw()
+
 	cls()
 	circfill(ball_x,ball_y,ball_radius,10)
 	rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
+
 end
 
 __gfx__

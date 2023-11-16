@@ -68,7 +68,7 @@ function move_paddle()
 	
 	-- ist pad am rechten rand?
 	if pad_x + pad_w > 127 then
-	 pad_x = 127 - pad_w
+		pad_x = 127 - pad_w
 	end
 
 end
@@ -93,23 +93,25 @@ function check_collision()
 
 	-- ist ball links von pad?
 	if ball_x+ball_radius < pad_x then
-	 return
+		return
 	end
 
 	-- wir haben eine kollision!
 	-- ist die kollision vertikal?
 	if ball_y < pad_y or ball_y > pad_y+pad_h then
-  ball_dy = -ball_dy
- else
+ 	ball_dy = -ball_dy
+	else
  	ball_dx = -ball_dx
 	end
 	
 end
 
 function _draw()
+
 	cls()
 	circfill(ball_x,ball_y,ball_radius,10)
 	rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
+
 end
 
 __gfx__

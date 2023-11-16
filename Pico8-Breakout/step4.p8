@@ -2,6 +2,7 @@ pico-8 cartridge // http://www.pico-8.com
 version 41
 __lua__
 function _init()
+
 	ball_x = 20
 	ball_y = 64
 	ball_dx = 1
@@ -9,13 +10,16 @@ function _init()
 	ball_radius = 2
 	
 	cls()
+
 end
 
 function _update()
+
 	ball_x = ball_x + ball_dx
 	ball_y = ball_y + ball_dy
 	
 	check_bounce()
+
 end
 
 function check_bounce()
@@ -34,8 +38,10 @@ end
 
 
 function _draw()
+
 	cls()
 	circfill(ball_x,ball_y,ball_radius,10)
+
 end
 
 __gfx__
