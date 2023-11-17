@@ -14,10 +14,10 @@ function _update()
 end
 
 function check_bounce()
-	if ball_x+ball_radius+1 > 127 then
+	if ball_x+ball_radius > 127 then
 		ball_dx = -ball_dx
 	end
-	if ball_x-ball_radius+1 < 0 then
+	if ball_x-ball_radius < 0 then
 		ball_dx = -ball_dx
 	end
 end

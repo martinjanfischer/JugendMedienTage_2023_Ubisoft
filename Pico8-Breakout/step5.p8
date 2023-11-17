@@ -34,12 +34,12 @@ end
 function check_bounce()
 
 	-- x-achse
-	if ball_x+ball_radius+1 > 127 or ball_x-ball_radius-1 < 0 then
+	if ball_x+ball_radius > 127 or ball_x-ball_radius < 0 then
 		ball_dx = -ball_dx
 	end
 
 	-- y-achse
-	if ball_y+ball_radius+1 > 127 or ball_y-ball_radius-1 < 0 then
+	if ball_y+ball_radius > 127 or ball_y-ball_radius < 0 then
 		ball_dy = -ball_dy
 	end
 
