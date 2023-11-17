@@ -15,12 +15,18 @@ Wir verzichten auf:
 	- Sprache: LUA
 	
 2. Erstes Programm [STEP1]
+	- Bedienung von Pico-8
+		- ESC, RUN bzw. STRG+R, SAVE, Drag-n-Drop
 	- PRINT
 		- PRINT wird in grün angezeigt - d.h. das ist ein Funktion von Pico!
 		- Anführungsstriche stellen klar, dass es sich um Text handelt
+		- Wir definieren eigene Funktionen später
 	- CLS
-	- Eigene Funktion
-		- Eigene Funktion ist nicht in grün, weil sie nicht von Pico ist!
+	- Variablen
+		- Name
+		- Wert
+		- Typ: Zahl, Text
+		- Operatoren: = + - 
 	- Wichtig: Pico wird euer Programm immer von oben nach unten, Zeile für Zeile durchgehen!
 	- Mit STRG-Z und STRG-Y rückgängig machen und wiederholen
 	- Shift gedrückt halten um Text zu markieren
@@ -48,19 +54,20 @@ Wir verzichten auf:
 	- IF-Statements
 		- Richtung ändern an der Kante
 		- Frage: Warum 127 und nicht 128?
+		- Vergleichsoperatoren > < (==)
 	- AUFGABE: Auch für linken Rand!
 	- Frage: Warum wird der Ball am Rand abgeschnitten?
 		- Hat einen Radius! Müssen wir berücksichtigen
 		- Radius in Variable (wir benutzen ihn mehrmals)
-		- Radius +/- 1, da Mittelpunkt nicht mitgezählt wird
 	- Struktur! Kollision in eigene Funktion!
+		- Eigene Funktion ist nicht in grün, weil sie nicht von Pico ist!
 	- Protip: Mit ALT-Hoch/Runter zwischen Funktionen springen
 	- BALL_DX ändern - was passiert bei Kollision?
 		- Lösung: BALL_DX nicht auf festen Wert ändern sondern auf -BALL_DX!
 
 5. AUFGABE: Den Ball diagonal bewegen! [STEP4]
 	Bonus: Farbe bei jedem Bounce verändern!
-	- Vergleichen, etwas aufräumen
+	- Vergleichen, etwas aufräumen (Refaktorierung)
 	- Kommentare!
 	
 6. Spielerinput [STEP5]
@@ -69,6 +76,7 @@ Wir verzichten auf:
 	- Paddle drawen
 		- 	RECTFILL(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
 	- Paddle bewegen
+		- BTN( )
 		- Wir benutzen zwei mal die 2 ... eine Variable!
 	- Paddle beschränken an den Seiten
 
@@ -80,7 +88,8 @@ Wir verzichten auf:
 		- Oft einfacher auszuschließen, wann keine Kollision vorliegt
 		- Ans Problem herantasten: Erst die einfachen Fälle behandeln
 		- Wir behandeln den Ball als Rechteck
-		- Mit Paint zeigen - alle vier Seiten ausschließen
+		- Schaubild
+			- Mit Paint zeigen - alle vier Seiten ausschließen
 	- Ball springt nicht seitlich vom Paddle weg!
 		- FRAGE: Warum?
 		- Wir prüfen nicht, aus welcher Richtung der Ball kommt!
@@ -98,7 +107,7 @@ Wir verzichten auf:
 
 	
 
-	
+Prototyp -> Polishing für ein richtiges Spiel
 
 BONUS:
 - Random Ball Start
