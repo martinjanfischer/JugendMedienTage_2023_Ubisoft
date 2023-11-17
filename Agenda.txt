@@ -1,7 +1,6 @@
 GENERELL:
 Wir verzichten auf:
 	- Loops
-	- Eigene Funktionen mit Parametern
 	- Lokale Variablen
 
 1. Intro
@@ -86,6 +85,15 @@ Wir verzichten auf:
 		- FRAGE: Warum?
 		- Wir prüfen nicht, aus welcher Richtung der Ball kommt!
 	- Y-Koordinate des Balls checken, wenn Kollision sicher ist
+	
+8. Brick [STEP7]
+	- Wir können noch nichts mit unserem Ball machen
+	- Brick, der zerstört werden kann!
+	- Brauchen wieder Kollisionsabfrage ...
+		- Sollten keine neue Funktion dafür schreiben!
+		- Aktuelle Funktion bearbeiten
+		- Intro: Funktionsparameter
+		- Intro: True/False return
 
 
 	

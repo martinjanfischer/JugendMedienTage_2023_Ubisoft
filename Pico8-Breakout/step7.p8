@@ -43,7 +43,7 @@ function _update()
 	
 	if brick_exists==true then
 		collision = check_collision(brick_x, brick_y, brick_w, brick_h)
-		if collision == true then
+		if collision==true then
 			brick_exists = false
 		end
 	end
