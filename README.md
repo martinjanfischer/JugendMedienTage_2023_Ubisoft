@@ -4,4 +4,4 @@
 Wir arbeiten mit der Educational Version von Pico-8
 https://www.pico-8-edu.com/
 
-Ihr könnt die .p8 Dateien herunterladen und per Drag-and-Drop in das Pico-8 Fenster kopieren und direkt ausprobieren.
+Um die .p8 Dateien direkt auszuprobieren müsst Ihr sie herunterladen, per Drag-and-Drop in das Pico-8 Fenster kopieren und die Tastenkombination CTRL+R drücken.
